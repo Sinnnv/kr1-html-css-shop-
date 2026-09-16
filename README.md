@@ -57,3 +57,7 @@
  
 
 Создана базовая структура проекта. 
+
+## Ссылка на опубликованный проект 
+
+GitHub Pages: https://Sinnnv.github.io/kr1-html-css-shop/ 
