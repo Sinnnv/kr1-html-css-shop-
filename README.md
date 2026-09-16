@@ -60,4 +60,4 @@
 
 ## Ссылка на опубликованный проект 
 
-GitHub Pages: https://Sinnnv.github.io/kr1-html-css-shop/ 
+GitHub Pages: https://sinnnv.github.io/kr1-html-css-shop-/
