@@ -95,3 +95,5 @@ GitHub Pages: https://sinnnv.github.io/kr1-html-css-shop-/
 - базовая HTML-валидация;
 - базовая JS-обработка формы;
 - сообщение об успешной отправке.
+
+Привет 
