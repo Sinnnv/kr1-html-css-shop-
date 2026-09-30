@@ -42,3 +42,18 @@ orderForm.addEventListener('submit', (event) => {
     orderForm.reset();
     orderDialog.close();
 });
+
+// Кнопка "Наверх" — FIXED позиционирование
+const scrollTopButton = document.getElementById('scroll-top-button');
+
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+        scrollTopButton.classList.add('scroll-top-button--visible');
+    } else {
+        scrollTopButton.classList.remove('scroll-top-button--visible');
+    }
+});
+
+scrollTopButton.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+});
