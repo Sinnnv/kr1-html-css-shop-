@@ -1,5 +1,5 @@
 const orderDialog = document.getElementById('order-dialog');
-const orderButtons = document.querySelectorAll('.product-card__button');
+const orderButtons = document.querySelectorAll('button.product-card__button');
 const closeDialogButton = document.getElementById('close-order-dialog');
 const selectedProductInput = document.getElementById('selected-product');
 
@@ -43,7 +43,6 @@ orderForm.addEventListener('submit', (event) => {
     orderDialog.close();
 });
 
-// Кнопка "Наверх" — FIXED позиционирование
 const scrollTopButton = document.getElementById('scroll-top-button');
 
 window.addEventListener('scroll', () => {
