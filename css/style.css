@@ -120,8 +120,12 @@ a:focus-visible {
 4. Блок site-header
 ===============================*/
 .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 900;
     background-color: var(--color-surface);
     padding: var(--space-lg);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
 .site-header__inner {
@@ -1017,4 +1021,9 @@ a:focus-visible {
     font-family: Consolas, monospace;
     font-size: 13px;
     color: var(--color-primary-dark);
+}
+.section,
+.hero,
+.site-footer {
+    scroll-margin-top: 100px;
 }
