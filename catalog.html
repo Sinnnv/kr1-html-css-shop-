@@ -90,28 +90,139 @@
                 <div class="products-grid">
                     <article class="product-card product-card--featured">
                         <span class="product-card__badge">Хит</span>
-                        <div class="product-card__img"></div>
+                        <img
+                            class="product-card__img"
+                            src="images/product-1.jpg"
+                            alt="Фотография товара 1"
+                            width="400"
+                            height="240"
+                            loading="lazy"
+                        >
+                        <p class="product-card__category">Электроника</p>
                         <h3 class="product-card__title">Товар 1</h3>
-                        <p class="product-card__description">Краткое описание учебного товара.</p>
-                        <p class="product-card__price">1000 руб.</p>
-                        <a class="button button--primary product-card__button" href="index.html#popular">Подробнее</a>
+                        <p class="product-card__description">
+                            Популярный учебный товар с бейджем «Хит».
+                        </p>
+                        <p class="product-card__price">
+                            1000 руб.
+                            <span class="product-card__old-price">1200 руб.</span>
+                        </p>
+                        <div class="product-card__actions">
+                            <a class="button button--primary" href="order.html">Заказать</a>
+                            <a class="button button--ghost" href="product.html">Подробнее</a>
+                        </div>
                     </article>
 
-                    <article class="product-card">
-                        <div class="product-card__img"></div>
+                    <article class="product-card product-card--new">
+                        <span class="product-card__badge product-card__badge--new">Новинка</span>
+                        <img
+                            class="product-card__img"
+                            src="images/product-2.jpg"
+                            alt="Фотография товара 2"
+                            width="400"
+                            height="240"
+                            loading="lazy"
+                        >
+                        <p class="product-card__category">Аксессуары</p>
                         <h3 class="product-card__title">Товар 2</h3>
-                        <p class="product-card__description">Краткое описание учебного товара.</p>
+                        <p class="product-card__description">
+                            Новинка каталога. Демонстрирует модификатор `product-card--new`.
+                        </p>
                         <p class="product-card__price">1500 руб.</p>
-                        <a class="button button--primary product-card__button" href="index.html#popular">Подробнее</a>
+                        <div class="product-card__actions">
+                            <a class="button button--primary" href="order.html">Заказать</a>
+                            <a class="button button--ghost" href="product.html">Подробнее</a>
+                        </div>
                     </article>
 
                     <article class="product-card product-card--discount">
                         <span class="product-card__badge product-card__badge--sale">-20%</span>
-                        <div class="product-card__img"></div>
+                        <img
+                            class="product-card__img"
+                            src="images/product-3.jpg"
+                            alt="Фотография товара 3"
+                            width="400"
+                            height="240"
+                            loading="lazy"
+                        >
+                        <p class="product-card__category">Для дома</p>
                         <h3 class="product-card__title">Товар 3</h3>
-                        <p class="product-card__description">Краткое описание учебного товара.</p>
-                        <p class="product-card__price product-card__price--discount">2000 руб.</p>
-                        <a class="button button--primary product-card__button" href="index.html#popular">Подробнее</a>
+                        <p class="product-card__description">
+                            Товар со скидкой. Используется модификатор `product-card--discount`.
+                        </p>
+                        <p class="product-card__price product-card__price--discount">
+                            2000 руб.
+                            <span class="product-card__old-price">2500 руб.</span>
+                        </p>
+                        <div class="product-card__actions">
+                            <a class="button button--primary" href="order.html">Заказать</a>
+                            <a class="button button--ghost" href="product.html">Подробнее</a>
+                        </div>
+                    </article>
+
+                    <article class="product-card">
+                        <img
+                            class="product-card__img"
+                            src="images/product-4.jpg"
+                            alt="Фотография товара 4"
+                            width="400"
+                            height="240"
+                            loading="lazy"
+                        >
+                        <p class="product-card__category">Канцелярия</p>
+                        <h3 class="product-card__title">Товар 4</h3>
+                        <p class="product-card__description">
+                            Обычная карточка товара без специальных модификаторов.
+                        </p>
+                        <p class="product-card__price">700 руб.</p>
+                        <div class="product-card__actions">
+                            <a class="button button--primary" href="order.html">Заказать</a>
+                            <a class="button button--ghost" href="product.html">Подробнее</a>
+                        </div>
+                    </article>
+
+                    <article class="product-card product-card--featured">
+                        <span class="product-card__badge">Выбор покупателей</span>
+                        <img
+                            class="product-card__img"
+                            src="images/product-5.jpg"
+                            alt="Фотография товара 5"
+                            width="400"
+                            height="240"
+                            loading="lazy"
+                        >
+                        <p class="product-card__category">Подарки</p>
+                        <h3 class="product-card__title">Товар 5</h3>
+                        <p class="product-card__description">
+                            Ещё один вариант выделенной карточки через БЭМ-модификатор.
+                        </p>
+                        <p class="product-card__price">1800 руб.</p>
+                        <div class="product-card__actions">
+                            <a class="button button--primary" href="order.html">Заказать</a>
+                            <a class="button button--ghost" href="product.html">Подробнее</a>
+                        </div>
+                    </article>
+
+                    <article class="product-card product-card--unavailable">
+                        <span class="product-card__badge product-card__badge--out">Нет в наличии</span>
+                        <img
+                            class="product-card__img"
+                            src="images/product-6.jpg"
+                            alt="Фотография товара 6"
+                            width="400"
+                            height="240"
+                            loading="lazy"
+                        >
+                        <p class="product-card__category">Редкая позиция</p>
+                        <h3 class="product-card__title">Товар 6</h3>
+                        <p class="product-card__description">
+                            Недоступный товар. Кнопка заказа отключена через `disabled`.
+                        </p>
+                        <p class="product-card__price">3000 руб.</p>
+                        <div class="product-card__actions">
+                            <button class="button button--primary" type="button" disabled>Заказать</button>
+                            <a class="button button--ghost" href="product.html">Подробнее</a>
+                        </div>
                     </article>
                 </div>
             </section>

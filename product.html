@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Страница карточки товара учебного интернет-магазина.">
+    <title>Карточка товара — Учебный интернет-магазин</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js" defer></script>
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="site-header__inner">
+            <a class="site-header__logo" href="index.html">ShopProject</a>
+
+            <nav class="site-nav" aria-label="Основная навигация">
+                <ul class="site-nav__list">
+                    <li class="site-nav__item">
+                        <a class="site-nav__link" href="index.html">Главная</a>
+                    </li>
+                    <li class="site-nav__item">
+                        <a class="site-nav__link" href="catalog.html">Каталог</a>
+                    </li>
+                    <li class="site-nav__item">
+                        <a class="site-nav__link site-nav__link--active" href="product.html">Товар</a>
+                    </li>
+                    <li class="site-nav__item">
+                        <a class="site-nav__link" href="order.html">Заявка</a>
+                    </li>
+                    <li class="site-nav__item">
+                        <a class="site-nav__link" href="contacts.html">Контакты</a>
+                    </li>
+                    <li class="site-nav__item">
+                        <a class="site-nav__link" href="index.html#popular">Популярные</a>
+                    </li>
+                    <li class="site-nav__item">
+                        <a class="site-nav__link" href="index.html#advantages">Преимущества</a>
+                    </li>
+                    <li class="site-nav__item">
+                        <a class="site-nav__link" href="index.html#reviews">Отзывы</a>
+                    </li>
+                    <li class="site-nav__item">
+                        <a class="site-nav__link" href="index.html#contacts">Контакты</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <nav class="breadcrumbs" aria-label="Хлебные крошки">
+            <a class="breadcrumbs__link" href="index.html">Главная</a>
+            <a class="breadcrumbs__link" href="catalog.html">Каталог</a>
+            <span class="breadcrumbs__current">Товар 1</span>
+        </nav>
+
+        <article class="product-detail">
+            <div class="product-detail__media">
+                <img
+                    class="product-detail__image"
+                    src="images/product-detail.jpg"
+                    alt="Основное изображение товара 1"
+                    width="800"
+                    height="500"
+                    loading="lazy"
+                >
+
+                <div class="product-detail__thumbs">
+                    <img
+                        class="product-detail__thumb"
+                        src="images/product-1.jpg"
+                        alt="Миниатюра товара 1, вариант 1"
+                        width="400"
+                        height="240"
+                        loading="lazy"
+                    >
+                    <img
+                        class="product-detail__thumb"
+                        src="images/product-2.jpg"
+                        alt="Миниатюра товара 1, вариант 2"
+                        width="400"
+                        height="240"
+                        loading="lazy"
+                    >
+                    <img
+                        class="product-detail__thumb"
+                        src="images/product-3.jpg"
+                        alt="Миниатюра товара 1, вариант 3"
+                        width="400"
+                        height="240"
+                        loading="lazy"
+                    >
+                </div>
+            </div>
+
+            <div class="product-detail__info">
+                <div class="product-detail__badges">
+                    <span class="badge">Хит</span>
+                    <span class="badge badge--new">Новинка</span>
+                    <span class="badge badge--muted">В наличии</span>
+                </div>
+
+                <h1 class="product-detail__title">Товар 1</h1>
+
+                <p class="product-detail__category">
+                    Категория: Электроника
+                </p>
+
+                <p class="product-detail__price">
+                    1000 руб.
+                    <span class="product-detail__price--old">1200 руб.</span>
+                </p>
+
+                <p class="product-detail__description">
+                    Это страница отдельной карточки товара. Здесь показаны изображение,
+                    описание, цена, характеристики и кнопки действия. Такая структура
+                    подходит для контрольной работы по многостраничному HTML/CSS-сайту.
+                </p>
+
+                <ul class="product-detail__features">
+                    <li>учебный товар для фронтенд-проекта;</li>
+                    <li>адаптированная карточка с БЭМ-классами;</li>
+                    <li>поддержка состояний наведения и фокуса;</li>
+                    <li>корректные подписи изображений через `alt`.</li>
+                </ul>
+
+                <div class="product-detail__actions">
+                    <a class="button button--primary button--large" href="order.html">
+                        Оформить заявку
+                    </a>
+                    <button class="button button--ghost" type="button">
+                        В избранное
+                    </button>
+                    <button class="button button--danger" type="button" disabled>
+                        Недоступно
+                    </button>
+                </div>
+            </div>
+        </article>
+
+        <section class="section" id="characteristics">
+            <h2>Характеристики товара</h2>
+
+            <div class="table-wrapper">
+                <table class="data-table">
+                    <caption>Основные характеристики</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Параметр</th>
+                            <th scope="col">Значение</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Категория</td>
+                            <td>Электроника</td>
+                        </tr>
+                        <tr>
+                            <td>Производитель</td>
+                            <td>Учебный бренд</td>
+                        </tr>
+                        <tr>
+                            <td>Модель</td>
+                            <td>KR1-001</td>
+                        </tr>
+                        <tr>
+                            <td>Цена</td>
+                            <td>1000 руб.</td>
+                        </tr>
+                        <tr>
+                            <td>Наличие</td>
+                            <td>В наличии</td>
+                        </tr>
+                        <tr>
+                            <td>Гарантия</td>
+                            <td>12 месяцев</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="section" id="product-reviews">
+            <h2>Отзывы о товаре</h2>
+
+            <div class="reviews-grid">
+                <article class="review-card review-card--highlight">
+                    <div class="review-card__header">
+                        <img
+                            class="review-card__avatar"
+                            src="images/review-1.jpg"
+                            alt="Фотография автора отзыва"
+                            width="80"
+                            height="80"
+                            loading="lazy"
+                        >
+                        <div>
+                            <p class="review-card__author">Анна</p>
+                            <span class="review-card__rating" aria-label="Оценка 5 из 5">★★★★★</span>
+                        </div>
+                    </div>
+                    <p class="review-card__text">
+                        Хороший товар для учебного проекта. Страница выглядит структурированно.
+                    </p>
+                    <p class="review-card__date">12 октября 2026</p>
+                </article>
+
+                <article class="review-card">
+                    <div class="review-card__header">
+                        <img
+                            class="review-card__avatar"
+                            src="images/review-2.jpg"
+                            alt="Фотография автора отзыва"
+                            width="80"
+                            height="80"
+                            loading="lazy"
+                        >
+                        <div>
+                            <p class="review-card__author">Дмитрий</p>
+                            <span class="review-card__rating" aria-label="Оценка 4 из 5">★★★★☆</span>
+                        </div>
+                    </div>
+                    <p class="review-card__text">
+                        Понравилась таблица характеристик.信息 понятно организовано.
+                    </p>
+                    <p class="review-card__date">11 октября 2026</p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 Учебный проект. Все права защищены.</p>
+        <p>Дисциплина: Фронтенд и бэкенд разработка</p>
+    </footer>
+
+    <button class="scroll-top-button" id="scroll-top-button" type="button" aria-label="Наверх">
+        ↑
+    </button>
+</body>
+</html>

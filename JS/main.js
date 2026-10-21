@@ -1,58 +1,100 @@
-const orderDialog = document.getElementById('order-dialog');
-const orderButtons = document.querySelectorAll('button.product-card__button');
-const closeDialogButton = document.getElementById('close-order-dialog');
-const selectedProductInput = document.getElementById('selected-product');
-
-orderButtons.forEach((button) => {
-    button.addEventListener('click', () => {
-        const productName = button.dataset.product;
-        selectedProductInput.value = productName;
-        orderDialog.showModal();
-    });
-});
-
-closeDialogButton.addEventListener('click', () => {
-    orderDialog.close();
-});
-
-const orderForm = document.getElementById('order-form');
-const successMessage = document.getElementById('success-message');
-
-orderForm.addEventListener('submit', (event) => {
-    event.preventDefault();
-
-    const formElements = Array.from(orderForm.elements);
-    formElements.forEach((element) => {
-        if (element.willValidate) {
-            element.removeAttribute('aria-invalid');
+(() => {
+    const initOrderDialog = () => {
+        const dialog = document.getElementById('order-dialog');
+        if (!dialog) {
+            return;
         }
-    });
 
-    if (!orderForm.checkValidity()) {
-        formElements.forEach((element) => {
-            if (element.willValidate && !element.checkValidity()) {
-                element.setAttribute('aria-invalid', 'true');
-            }
+        const selectedProductInput = document.getElementById('selected-product');
+        const closeDialogButton = document.getElementById('close-order-dialog');
+        const orderButtons = document.querySelectorAll(
+            '.product-card__button[data-product], [data-open-order-dialog]'
+        );
+
+        orderButtons.forEach((button) => {
+            button.addEventListener('click', () => {
+                if (selectedProductInput && button.dataset.product) {
+                    selectedProductInput.value = button.dataset.product;
+                }
+
+                dialog.showModal();
+            });
         });
-        orderForm.reportValidity();
-        return;
-    }
 
-    successMessage.hidden = false;
-    orderForm.reset();
-    orderDialog.close();
-});
+        if (closeDialogButton) {
+            closeDialogButton.addEventListener('click', () => {
+                dialog.close();
+            });
+        }
+    };
 
-const scrollTopButton = document.getElementById('scroll-top-button');
+    const initForms = () => {
+        const forms = document.querySelectorAll('form.order-form');
 
-window.addEventListener('scroll', () => {
-    if (window.scrollY > 300) {
-        scrollTopButton.classList.add('scroll-top-button--visible');
-    } else {
-        scrollTopButton.classList.remove('scroll-top-button--visible');
-    }
-});
+        forms.forEach((form) => {
+            form.addEventListener('submit', (event) => {
+                event.preventDefault();
 
-scrollTopButton.addEventListener('click', () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-});
+                const controls = Array.from(form.elements).filter((element) => element.willValidate);
+
+                controls.forEach((element) => {
+                    element.removeAttribute('aria-invalid');
+                });
+
+                if (!form.checkValidity()) {
+                    controls.forEach((element) => {
+                        if (!element.checkValidity()) {
+                            element.setAttribute('aria-invalid', 'true');
+                        }
+                    });
+
+                    form.reportValidity();
+                    return;
+                }
+
+                const successMessage = document.getElementById('success-message');
+                if (successMessage) {
+                    successMessage.hidden = false;
+                }
+
+                const dialog = form.closest('dialog');
+                if (dialog) {
+                    dialog.close();
+                }
+
+                form.reset();
+            });
+        });
+    };
+
+    const initScrollTopButton = () => {
+        const scrollTopButton = document.getElementById('scroll-top-button');
+        if (!scrollTopButton) {
+            return;
+        }
+
+        const toggleButton = () => {
+            if (window.scrollY > 300) {
+                scrollTopButton.classList.add('scroll-top-button--visible');
+            } else {
+                scrollTopButton.classList.remove('scroll-top-button--visible');
+            }
+        };
+
+        window.addEventListener('scroll', toggleButton);
+        toggleButton();
+
+        scrollTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    };
+
+    document.addEventListener('DOMContentLoaded', () => {
+        initOrderDialog();
+        initForms();
+        initScrollTopButton();
+    });
+})();
