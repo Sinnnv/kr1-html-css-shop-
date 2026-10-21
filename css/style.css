@@ -904,3 +904,12 @@ a:focus-visible {
 .scroll-top-button {
     z-index: 1000;
 }
+/* Бейдж всегда поверх контента карточки (чинит filter на img) */
+.product-card__badge {
+    z-index: 2;
+}
+
+/* Серая плашка для недоступного товара */
+.product-card__badge--out {
+    background-color: var(--color-muted);
+}
