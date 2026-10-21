@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Часто задаваемые вопросы учебного интернет-магазина: доставка, оплата, возврат и оформление заявки.">
+    <title>Вопросы и ответы — Учебный интернет-магазин</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js" defer></script>
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="site-header__inner">
+            <a class="site-header__logo" href="index.html">ShopProject</a>
+            <nav class="site-nav" aria-label="Основная навигация">
+                <ul class="site-nav__list">
+                    <li class="site-nav__item"><a class="site-nav__link" href="index.html">Главная</a></li>
+                    <li class="site-nav__item"><a class="site-nav__link" href="catalog.html">Каталог</a></li>
+                    <li class="site-nav__item"><a class="site-nav__link" href="product.html">Товар</a></li>
+                    <li class="site-nav__item"><a class="site-nav__link" href="order.html">Заявка</a></li>
+                    <li class="site-nav__item"><a class="site-nav__link site-nav__link--active" href="faq.html">FAQ</a></li>
+                    <li class="site-nav__item"><a class="site-nav__link" href="contacts.html">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <nav class="breadcrumbs" aria-label="Хлебные крошки">
+            <a class="breadcrumbs__link" href="index.html">Главная</a>
+            <span class="breadcrumbs__current">Вопросы и ответы</span>
+        </nav>
+
+        <section class="section">
+            <h1>Часто задаваемые вопросы</h1>
+            <p>
+                Ниже собраны ответы на типовые вопросы об учебном интернет-магазине:
+                доставка, оплата, возврат и оформление заявки.
+            </p>
+        </section>
+
+        <section class="faq" aria-label="Вопросы и ответы">
+            <div class="faq__list">
+
+                <details class="faq__item">
+                    <summary class="faq__question">Как оформить заявку на товар?</summary>
+                    <div class="faq__answer">
+                        <p>
+                            Откройте карточку товара в каталоге и нажмите «Заказать» —
+                            откроется модальное окно с формой. Также заявка доступна
+                            на отдельной странице <a href="order.html">«Заявка»</a>.
+                        </p>
+                    </div>
+                </details>
+
+                <details class="faq__item">
+                    <summary class="faq__question">Сколько стоит доставка?</summary>
+                    <div class="faq__answer">
+                        <p>
+                            Стоимость зависит от тарифа. Базовая доставка бесплатна,
+                            стандартный тариф — 199 руб., премиум — 399 руб.
+                            Подробное сравнение тарифов приведено в таблице
+                            на странице заявки.
+                        </p>
+                    </div>
+                </details>
+
+                <details class="faq__item">
+                    <summary class="faq__question">Какие способы оплаты доступны?</summary>
+                    <div class="faq__answer">
+                        <p>
+                            В учебном проекте реализована только форма заявки без
+                            реального платежа. В боевом магазине здесь были бы
+                            банковская карта, СБП и оплата при получении.
+                        </p>
+                    </div>
+                </details>
+
+                <details class="faq__item">
+                    <summary class="faq__question">Можно ли вернуть товар?</summary>
+                    <div class="faq__answer">
+                        <p>
+                            Да. Для возврата оформите заявку с темой «Консультация»
+                            и укажите номер заказа в комментарии. Менеджер свяжется
+                            с вами в рабочее время.
+                        </p>
+                    </div>
+                </details>
+
+                <details class="faq__item">
+                    <summary class="faq__question">Есть ли гарантия на товары?</summary>
+                    <div class="faq__answer">
+                        <p>
+                            Гарантия указана в таблице характеристик каждой карточки
+                            товара. Например, на «Товар 1» — 12 месяцев, на
+                            аксессуары — 6 месяцев.
+                        </p>
+                    </div>
+                </details>
+
+                <details class="faq__item">
+                    <summary class="faq__question">Почему товар отмечен «Нет в наличии»?</summary>
+                    <div class="faq__answer">
+                        <p>
+                            Такие карточки используют модификатор
+                            <code>product-card--unavailable</code>: изображение
+                            обесцвечено, а кнопка заказа отключена через
+                            <code>disabled</code>. Это демонстрация состояний
+                            интерфейса.
+                        </p>
+                    </div>
+                </details>
+
+                <details class="faq__item">
+                    <summary class="faq__question">Как связаться с поддержкой?</summary>
+                    <div class="faq__answer">
+                        <p>
+                            Телефон, e-mail и адрес указаны на странице
+                            <a href="contacts.html">«Контакты»</a>. Там же есть
+                            ссылка на форму обратной связи.
+                        </p>
+                    </div>
+                </details>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 Учебный проект. Все права защищены.</p>
+        <p>Дисциплина: Фронтенд и бэкенд разработка</p>
+    </footer>
+
+    <button class="scroll-top-button" id="scroll-top-button" type="button" aria-label="Наверх">↑</button>
+</body>
+</html>

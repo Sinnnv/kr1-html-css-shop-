@@ -913,3 +913,108 @@ a:focus-visible {
 .product-card__badge--out {
     background-color: var(--color-muted);
 }
+/* Фикс: кнопки «Заказать» и «Подробнее» в один ряд, без переноса */
+.product-card__actions {
+    flex-wrap: nowrap;
+}
+
+.product-card__actions .button,
+.product-card__actions .product-card__button {
+    margin-top: 0;
+    flex: 0 1 auto;
+    white-space: nowrap;
+    padding: var(--space-xs) var(--space-sm);
+    font-size: 14px;
+}
+/*===============================
+22. Блок faq (аккордеон на details/summary)
+===============================*/
+.faq {
+    max-width: var(--container-width);
+    margin: 0 auto var(--space-xl);
+}
+
+.faq__list {
+    display: grid;
+    gap: var(--space-md);
+}
+
+.faq__item {
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    background-color: var(--color-bg);
+    overflow: hidden;
+}
+
+.faq__item[open] {
+    border-color: var(--color-primary);
+}
+
+.faq__question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--space-md);
+    padding: var(--space-md);
+    margin: 0;
+    font-weight: 700;
+    color: var(--color-text);
+    cursor: pointer;
+    list-style: none;
+}
+
+.faq__question::-webkit-details-marker {
+    display: none;
+}
+
+.faq__question::after {
+    content: "+";
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius-sm);
+    background-color: var(--color-surface-accent);
+    color: var(--color-primary);
+    font-size: 18px;
+    line-height: 1;
+}
+
+.faq__item[open] .faq__question::after {
+    content: "\2212";
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+.faq__question:hover {
+    background-color: var(--color-surface);
+}
+
+.faq__question:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: -2px;
+}
+
+.faq__answer {
+    padding: 0 var(--space-md) var(--space-md);
+    color: var(--color-muted);
+}
+
+.faq__answer p {
+    margin: 0 0 var(--space-sm);
+}
+
+.faq__answer p:last-child {
+    margin-bottom: 0;
+}
+
+.faq__answer code {
+    padding: 2px 6px;
+    border-radius: var(--radius-sm);
+    background-color: var(--color-surface);
+    font-family: Consolas, monospace;
+    font-size: 13px;
+    color: var(--color-primary-dark);
+}
